@@ -59,3 +59,20 @@ function correta(x) {
         pontuacao.innerHTML = `<p>Você tem <strong> ${pontos}</strong> pontos</p>`
     }
 }
+function enviar(qntquest) {
+    Number(qntquest)
+    var pagina = document.querySelector('#page')
+    if (pontos == qntquest) {
+        pagina.innerHTML = '<h1>Parabéns você acertou todas as questões</h1>'
+        console.log('all')
+    }else if(pontos > qntquest/2){
+        pagina.innerHTML = '<h1>Parabéns você acertou mais de 50% das questões</h1>'
+        console.log('50%')
+    }else if(pontos == 0){
+        pagina.innerHTML = '<h1>Você não acertou nenhuma questão recarregue a página e tente novamente</h1>'
+        console.log('0')
+    }else{
+        pagina.innerHTML = '<h1>Você acertou menos de 50% tente novamente recarregue a página e tente novamente</h1>'
+        console.log('-50%')
+    }
+}
