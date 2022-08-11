@@ -1,7 +1,8 @@
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
-    color: #666666;
+    margin:0;
+    text-align: center;
 }
 .titulo{
     text-align: center;
@@ -17,9 +18,13 @@ body{
 
 }
 div{
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+}
+.questao{
+    background-color: gray;
+    border: 2px solid;
+    text-align: left;
 }
