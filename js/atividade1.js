@@ -1,15 +1,16 @@
 var form = document.querySelector('.formulario')
 var pontos = 0
 
-function incorreta() {
+function incorreta(x) {
     //#region variaveis
-    var estado = document.querySelector('.status')
-    var input1 = document.querySelector('.input1')
-    var input2 = document.querySelector('.input2')
-    var input3 = document.querySelector('.input3')
-    var input4 = document.querySelector('.input4')
-    var input5 = document.querySelector('.input5')
-    const questao = document.querySelector('.questao')
+    var questao = document.querySelector(`#quest${x}`)
+    var estado = document.querySelector(`.status-${x}`)
+    var input1 = document.querySelector(`.input1-${x}`)
+    var input2 = document.querySelector(`.input2-${x}`)
+    var input3 = document.querySelector(`.input3-${x}`)
+    var input4 = document.querySelector(`.input4-${x}`)
+    var input5 = document.querySelector(`.input5-${x}`)
+
     //#endregion
 
     //#region disabled input
@@ -26,15 +27,16 @@ function incorreta() {
     estado.innerHTML = '<p> Resposta Incorreta</p>'
 
 }
-function correta() {
+
+function correta(x) {
     //#region variaveis
-    var estado = document.querySelector('.status')
-    var input1 = document.querySelector('.input1')
-    var input2 = document.querySelector('.input2')
-    var input3 = document.querySelector('.input3')
-    var input4 = document.querySelector('.input4')
-    var input5 = document.querySelector('.input5')
-    const questao = document.querySelector('.questao')
+    var questao = document.querySelector(`#quest${x}`)
+    var estado = document.querySelector(`.status-${x}`)
+    var input1 = document.querySelector(`.input1-${x}`)
+    var input2 = document.querySelector(`.input2-${x}`)
+    var input3 = document.querySelector(`.input3-${x}`)
+    var input4 = document.querySelector(`.input4-${x}`)
+    var input5 = document.querySelector(`.input5-${x}`)
     var pontuacao = document.querySelector('.pontuacao')
     //#endregion
 
@@ -48,10 +50,12 @@ function correta() {
 
     questao.style.backgroundColor = '#4B940F'
 
-    estado.innerHTML = '<p> Resposta Correta</p>'
+    estado.innerHTML = '<p>Resposta Correta</p>'
     
     pontos++
-    pontuacao.innerHTML = `<p>Você tem <strong> ${pontos}</strong> pontos </p>`
-
-
+    if(pontos == 1){
+        pontuacao.innerHTML = `<p>Você tem <strong> ${pontos}</strong> ponto</p>`
+    }else{
+        pontuacao.innerHTML = `<p>Você tem <strong> ${pontos}</strong> pontos</p>`
+    }
 }
