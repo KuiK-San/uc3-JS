@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Copiar campos</title>
+</head>
+<body>
+    <h1 class="titulo">Função de copiar campos</h1>
+    Campo 1: <input type="text" name="" id="campo1" value="hello world"> <br><br>
+    Campo 2: <input type="text" name="" id="campo2"><br>
+    <button onclick="minhafuncao()">COPIAR</button>
+    <p>A função irá copiar os dados do campo1 para o campo2</p>
+    <script>
+        function minhafuncao() {
+            document.querySelector('#campo2').value = document.querySelector('#campo1').value
+        }
+    </script>
+</body>
+</html>

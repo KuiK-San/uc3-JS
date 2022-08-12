@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #meuprogresso{
+            width: 100%;
+            height: 30px;
+            position: relative;
+            background-color: #ddd;
+        }
+        #barra{
+            background-color: aquamarine;
+            width: 0%;
+            height: 30px;
+            position: absolute;
+            transition-property: background-color;
+            transition-duration: 1000ms;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu progresso de uma Barra</h1>
+    <div class="" id="meuprogresso">
+        <div class="" id="barra">
+
+        </div>
+    </div>
+    <br>
+    <button onclick="move(100)">Clique aqui</button>
+
+    <script>
+        function move(x) {
+            var elem = document.querySelector('#barra')
+            var width = 0
+            var id = setInterval(frame, 20)
+            
+                function frame(){
+                if(width == x){
+                    clearInterval(id)
+                }else{
+                    
+                    width++
+                    elem.style.width = width + '%'
+                }
+                
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
