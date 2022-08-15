@@ -9,7 +9,7 @@ function calcular() {
     if (media >= 7.0) {
         resultado.innerHTML = `<p>Parabéns ${nome} sua média foi de ${media}</p><p>quer fazer um novo calculo?</p><input type="button" value="Refazer" onclick="refazer()">`    
     }else{
-        resultado.innerHTML = 'Nota Baixa<br><p>quer fazer um novo calculo?</p><input type="button" value="Refazer" onclick="refazer()">'
+        resultado.innerHTML = '<p>Nota Baixa</p><p>quer fazer um novo calculo?</p><input type="button" value="Refazer" onclick="refazer()">'
     }
 }
 function refazer() {
