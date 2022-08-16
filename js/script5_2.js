@@ -8,12 +8,12 @@ for (let i = 1; i <= qnt_nota; i++) {
 </p>`
 }
 function calcular() {
+    var soma = 0
     for(let i = 1;i <= qnt_nota; i++){
-        var soma = 0
-        var nota = nota + i
+        soma += Number(document.querySelector(`.nota${i}`).value)
     }
     var nome = document.formulario.nome.value
-    var media = soma / qnt_nota
+    var media = parseInt(soma / qnt_nota)
     var resultado = document.querySelector('.resultado')
     if (media >= 7.0) {
         resultado.innerHTML = `<p>Parabéns ${nome} sua média foi de ${media}</p><p>quer fazer um novo calculo?</p><input type="button" value="Refazer" onclick="refazer()">`    
